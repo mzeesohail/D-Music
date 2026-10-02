@@ -1,4 +1,4 @@
-const CLIENT_ID = 'PASTE_YOUR_ID_HERE';
+const CLIENT_ID = '17911301156-6pbjojugqb4ate0n4qh62u9h6oj0vu69.apps.googleusercontent.com';
 const SCOPE = 'https://www.googleapis.com/auth/drive.readonly';
 let token = null;
 let files = [];
