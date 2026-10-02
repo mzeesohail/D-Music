@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Drive Music Player</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <header>
+    <h1>🎵 My Music</h1>
+    <div id="user-bar" style="display:none;">
+      <input id="username" placeholder="Enter Username" />
+      <button onclick="setUser()">Set</button>
+      <span id="current-user"></span>
+    </div>
+  </header>
+
+  <main>
+    <section id="login-section">
+      <p>Sign in to access your Drive music.</p>
+      <button id="google-login">Sign in with Google</button>
+    </section>
+
+    <section id="app-section" style="display:none;">
+      <audio id="player" controls></audio>
+      <div class="tabs">
+        <button class="active" onclick="showTab('playlist', this)">Playlist</button>
+        <button onclick="showTab('history', this)">History</button>
+      </div>
+      <ul id="playlist"></ul>
+      <ul id="history" style="display:none;"></ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
